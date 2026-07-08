@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This portfolio showcases my projects, 
 
 ## 🔗 Live Demo
 
-[https://your-portfolio.netlify.app](https://dikshadhalpe-portfolio-dikshadhalpes-projects.vercel.app/](https://dikshadhalpe-portfolio-dikshadhalpes-projects.vercel.app/)
+[DEMO](https://dikshadhalpe-portfolio-dikshadhalpes-projects.vercel.app/)
 
 ---
 
