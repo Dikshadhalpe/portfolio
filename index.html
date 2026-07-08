@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Diksha Dhalpe — IT Undergraduate, Java Full Stack Developer, Aspiring Software Engineer. Portfolio showcasing projects, skills, and achievements." />
+  <meta name="keywords" content="Diksha Dhalpe, software engineer, Java developer, full stack, portfolio, IT student" />
+  <meta property="og:title" content="Diksha Dhalpe — Software Engineer Portfolio" />
+  <meta property="og:description" content="IT Undergraduate | Java Full Stack Developer | Problem Solver" />
+  <meta property="og:type" content="website" />
+  <title>Diksha Dhalpe — Software Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  LOADER                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div id="loader" aria-hidden="true">
+  <span class="loader-logo">DD</span>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CURSOR                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Scroll progress bar -->
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- Background canvas (particles) -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- Ambient orbs -->
+<div class="gradient-orb orb-1" aria-hidden="true"></div>
+<div class="gradient-orb orb-2" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  NAVBAR                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      
+
+      <div class="nav-links" role="menubar">
+        <a href="#hero"         role="menuitem">Home</a>
+        <a href="#about"        role="menuitem">About</a>
+       
+        <a href="#projects"     role="menuitem">Projects</a>
+      
+        <a href="#resume"       role="menuitem">Resume</a>
+        <a href="#contact"      role="menuitem">Contact</a>
+      </div>
+
+      <div class="nav-actions" >
+        <a href="mailto:dikshadhalpe22@gmail.com" class="icon-btn" aria-label="Email" title="Email" >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button id="menu-close" class="menu-close icon-btn" aria-label="Close menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HERO                                                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- Left: Text -->
+      <div class="hero-left">
+        <span class="hero-greeting">Hello, I'm </span>
+        <h1 class="hero-name">Diksha <span class="gradient-text">Dhalpe</span></h1>
+
+        <p class="hero-role">
+          <span id="typed-text"></span><span class="hero-typed-cursor">|</span>
+        </p>
+
+        <p class="hero-desc">
+         Aspiring Software Engineer focused on developing modern full-stack applications with a passion for clean architecture, intuitive design, and continuous learning.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="resume/diksha.pdf" download class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">Contact Me </a>
+        </div>
+      </div>
+
+      <!-- Right: Avatar -->
+      <div class="hero-visual">
+        <div class="avatar-glow-ring"></div>
+
+        <!-- Floating tech icons -->
+        <div class="floating-icon glass fi-1">
+          <svg viewBox="0 0 24 24" fill="#00E5FF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <div class="floating-icon glass fi-2">
+          <!-- React icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="1.5"><circle cx="12" cy="12" r="2.2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <div class="floating-icon glass fi-3">
+          <!-- Git branch -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+        </div>
+        <div class="floating-icon glass fi-4">
+          <!-- Database -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6C63FF" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+
+        <!-- Avatar SVG illustration -->
+        <div class="avatar-card glass">
+          <svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1a1f35;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#0e1422;stop-opacity:1"/>
+              </linearGradient>
+              <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#d4956a"/>
+                <stop offset="100%" style="stop-color:#b87850"/>
+              </linearGradient>
+              <linearGradient id="clothGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6C63FF"/>
+                <stop offset="100%" style="stop-color:#4a3fff"/>
+              </linearGradient>
+              <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0.15"/>
+                <stop offset="100%" style="stop-color:#6C63FF;stop-opacity:0.25"/>
+              </linearGradient>
+              <radialGradient id="glowHalo" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:0.3"/>
+                <stop offset="100%" style="stop-color:#6C63FF;stop-opacity:0"/>
+              </radialGradient>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+
+            <!-- Background -->
+            <rect width="320" height="380" fill="url(#bgGrad)"/>
+
+            <!-- Halo glow -->
+            <ellipse cx="160" cy="160" rx="130" ry="130" fill="url(#glowHalo)"/>
+
+            <!-- Desk -->
+            <rect x="30" y="290" width="260" height="14" rx="4" fill="#1e2540"/>
+            <rect x="20" y="304" width="280" height="6" rx="3" fill="#252c48"/>
+
+            <!-- Monitor -->
+            <rect x="75" y="200" width="170" height="105" rx="10" fill="#141827" stroke="#2e3558" stroke-width="1.5"/>
+            <rect x="85" y="210" width="150" height="80" rx="6" fill="url(#screenGrad)"/>
+            <!-- Code lines on screen -->
+            <rect x="95" y="222" width="50" height="4" rx="2" fill="#6C63FF" opacity=".8"/>
+            <rect x="95" y="232" width="80" height="4" rx="2" fill="#00E5FF" opacity=".6"/>
+            <rect x="105" y="242" width="60" height="4" rx="2" fill="#9CA3AF" opacity=".5"/>
+            <rect x="105" y="252" width="40" height="4" rx="2" fill="#22C55E" opacity=".7"/>
+            <rect x="95" y="262" width="70" height="4" rx="2" fill="#6C63FF" opacity=".5"/>
+            <rect x="95" y="272" width="55" height="4" rx="2" fill="#00E5FF" opacity=".4"/>
+            <!-- Monitor stand -->
+            <rect x="152" y="305" width="16" height="16" rx="2" fill="#1e2540"/>
+            <rect x="140" y="319" width="40" height="5" rx="2" fill="#1e2540"/>
+
+            <!-- Chair back -->
+            <rect x="105" y="260" width="110" height="6" rx="3" fill="#2a2060" opacity=".8"/>
+
+            <!-- Body / hoodie -->
+            <path d="M95 340 Q95 305 110 295 Q130 285 160 282 Q190 285 210 295 Q225 305 225 340 Z" fill="url(#clothGrad)"/>
+            <!-- Hoodie details -->
+            <path d="M148 282 L155 310 L160 305 L165 310 L172 282" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+            <!-- Sleeve left -->
+            <path d="M95 340 Q80 320 82 300 Q92 290 110 295" fill="url(#clothGrad)"/>
+            <!-- Sleeve right -->
+            <path d="M225 340 Q240 320 238 300 Q228 290 210 295" fill="url(#clothGrad)"/>
+            <!-- Hands on keyboard -->
+            <ellipse cx="120" cy="300" rx="14" ry="9" fill="url(#skinGrad)"/>
+            <ellipse cx="200" cy="300" rx="14" ry="9" fill="url(#skinGrad)"/>
+
+            <!-- Neck -->
+            <rect x="150" y="185" width="20" height="28" rx="8" fill="url(#skinGrad)"/>
+
+            <!-- Head -->
+            <ellipse cx="160" cy="158" rx="48" ry="52" fill="url(#skinGrad)"/>
+
+            <!-- Hair — long dark hair -->
+            <path d="M112 148 Q108 100 130 80 Q145 65 160 62 Q175 65 190 80 Q212 100 208 148 Q200 130 200 110 Q185 90 160 88 Q135 90 120 110 Q120 130 112 148Z" fill="#1a0e0a"/>
+            <path d="M112 148 Q105 175 108 200 Q120 220 112 240" fill="none" stroke="#1a0e0a" stroke-width="18" stroke-linecap="round"/>
+            <path d="M208 148 Q215 175 212 200 Q200 220 208 240" fill="none" stroke="#1a0e0a" stroke-width="18" stroke-linecap="round"/>
+
+            <!-- Face features -->
+            <!-- Eyes -->
+            <ellipse cx="145" cy="158" rx="8" ry="9" fill="#fff"/>
+            <ellipse cx="175" cy="158" rx="8" ry="9" fill="#fff"/>
+            <circle cx="146" cy="159" r="5.5" fill="#2d1c0f"/>
+            <circle cx="176" cy="159" r="5.5" fill="#2d1c0f"/>
+            <circle cx="148" cy="157" r="2" fill="#fff" opacity=".7"/>
+            <circle cx="178" cy="157" r="2" fill="#fff" opacity=".7"/>
+            <!-- Eyebrows -->
+            <path d="M136 145 Q145 140 155 144" stroke="#1a0e0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M165 144 Q175 140 184 145" stroke="#1a0e0a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Nose -->
+            <path d="M157 168 Q160 176 163 168" stroke="#b87050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <!-- Smile -->
+            <path d="M148 182 Q160 192 172 182" stroke="#c97055" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <!-- Cheek blush -->
+            <ellipse cx="138" cy="175" rx="9" ry="5" fill="#e87070" opacity=".22"/>
+            <ellipse cx="182" cy="175" rx="9" ry="5" fill="#e87070" opacity=".22"/>
+
+            <!-- Glasses -->
+            <rect x="133" y="150" width="26" height="19" rx="7" fill="none" stroke="#6C63FF" stroke-width="2" opacity=".9"/>
+            <rect x="163" y="150" width="26" height="19" rx="7" fill="none" stroke="#6C63FF" stroke-width="2" opacity=".9"/>
+            <line x1="159" y1="159" x2="163" y2="159" stroke="#6C63FF" stroke-width="2"/>
+            <line x1="107" y1="159" x2="133" y2="159" stroke="#6C63FF" stroke-width="1.5"/>
+            <line x1="189" y1="159" x2="213" y2="159" stroke="#6C63FF" stroke-width="1.5"/>
+
+            <!-- Keyboard -->
+            <rect x="100" y="290" width="120" height="14" rx="4" fill="#1e2540" stroke="#2e3558" stroke-width="1"/>
+            <rect x="104" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+            <rect x="121" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+            <rect x="138" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+            <rect x="155" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+            <rect x="172" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+            <rect x="189" y="293" width="14" height="5" rx="1.5" fill="#2a3060" opacity=".8"/>
+
+            <!-- Badge / headset suggestion -->
+            <circle cx="274" cy="46" r="26" fill="rgba(108,99,255,0.15)" stroke="rgba(108,99,255,0.4)" stroke-width="1"/>
+            <text x="274" y="52" text-anchor="middle" fill="#6C63FF" font-family="Poppins" font-weight="700" font-size="14">&lt;/&gt;</text>
+
+            <!-- Floating stars / sparkles -->
+            <circle cx="46" cy="70" r="3" fill="#00E5FF" opacity=".7">
+              <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.1s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="280" cy="130" r="2.5" fill="#6C63FF" opacity=".8">
+              <animate attributeName="opacity" values="0.8;0.2;0.8" dur="1.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="55" cy="240" r="2" fill="#22C55E" opacity=".6">
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </div><!-- .hero-grid -->
+  </div><!-- .container -->
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue" aria-hidden="true">
+    <div class="line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ABOUT                                                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div data-reveal>
+      <p class="section-eyebrow">About Me</p>
+      <h2 class="section-title">Crafting Code, <span class="gradient-text">Building Futures</span></h2>
+      <p class="section-sub">A quick look at who I am, what drives me, and the journey so far.</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Left: card -->
+      <div data-reveal>
+        <div class="glass about-card">
+        <p>
+  Building software isn't just about writing code—it's about creating solutions that people love to use.
+</p>
+
+<p>
+  I enjoy crafting scalable applications, solving real-world problems, and exploring new technologies every day.
+</p>
+
+<p>
+  My goal is simple: build, learn, innovate, and make an impact.
+</p>
+
+          <div class="about-meta">
+            <div>
+              <span>Location</span>
+              <strong>Pune, India</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Animated counters -->
+        <div class="stats-row" data-reveal>
+          <div class="glass stat-box">
+            <div class="stat-num gradient-text" data-target="8" data-suffix="+">0+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="glass stat-box">
+            <div class="stat-num gradient-text" data-target="300" data-suffix="+">0+</div>
+            <div class="stat-label">DSA Problems Solved</div>
+          </div>
+          <div class="glass stat-box">
+            <div class="stat-num gradient-text" data-target="5" data-suffix="">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="glass stat-box">
+            <div class="stat-num gradient-text" data-target="10" data-suffix="+">0+</div>
+            <div class="stat-label">Technologies Learned</div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROJECTS                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div data-reveal>
+      <p class="section-eyebrow">Projects</p>
+      <h2 class="section-title">Things I've <span class="gradient-text">Built</span></h2>
+      <p class="section-sub">Production-grade projects across the full stack. Click any card for architecture details, challenges, and future plans.</p>
+    </div>
+
+    <div class="project-controls" data-reveal>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Java">Java</button>
+        <button class="filter-btn" data-filter="React">React</button>
+        <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+        <button class="filter-btn" data-filter="AI">AI</button>
+        <button class="filter-btn" data-filter="Web">Web</button>
+        <button class="filter-btn" data-filter="Backend">Backend</button>
+        <button class="filter-btn" data-filter="Backend">Frontend</button>
+      </div>
+      <div class="project-search glass">
+        <svg id="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="project-search" placeholder="Search projects or tech…" aria-label="Search projects" />
+      </div>
+    </div>
+
+    <div id="projects-grid" class="projects-grid" data-reveal></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  RESUME                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="resume">
+  <div class="container">
+    <div data-reveal>
+      <p class="section-eyebrow">Resume</p>
+      <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+    </div>
+    <div class="glass resume-box" data-reveal>
+      <div>
+        <h3>Diksha Dhalpe — Software Engineer</h3>
+        <p>Java Full Stack Developer · IT Undergraduate · Competitive Programmer.<br>Available for internships and full-time roles starting 2026.</p>
+      </div>
+      <div class="resume-actions">
+        <a href="resume/Diksha.pdf" download class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+        <a href="resume/Diksha.pdf" target="_blank" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          View Online
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CONTACT                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div data-reveal>
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-sub">Have a project in mind, a role to discuss, or just want to say hi? I'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Info column -->
+      <div class="contact-info" data-reveal>
+        <div class="contact-info-item">
+          <button class="icon-btn" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </button>
+          <div>
+            <strong>Email</strong>
+            <span>dikshadhalpe225@email.com</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <button class="icon-btn" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </button>
+          <div>
+            <strong>Phone</strong>
+            <span>+91 70208 81100</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <button class="icon-btn" aria-label="Location">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </button>
+          <div>
+            <strong>Location</strong>
+            <span>Pune, India</span>
+          </div>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/dikshadhalpe" target="_blank" class="icon-btn" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/dikshadhalpe" target="_blank" class="icon-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <!-- <a href="#" target="_blank" class="icon-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a> -->
+          <button id="copy-email" class="icon-btn btn-outline btn-sm" style="width:auto;border-radius:999px;padding:9px 14px;gap:6px;display:flex;" aria-label="Copy email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy email
+          </button>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="glass contact-form" id="contact-form" novalidate data-reveal>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Job opportunity / Collaboration / Hi!" required />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me what's on your mind…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#hero" class="nav-logo" style="margin-bottom:14px;display:inline-flex;">DD</a>
+        <p style="color:var(--muted);font-size:.88rem;max-width:260px;margin-top:12px;">Building elegant software — one commit at a time.</p>
+      </div>
+      <!-- <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </div> -->
+      <div class="social-row" style="align-self:flex-start;">
+        <a href="https://github.com/dikshadhalpe" class="icon-btn" target="_blank" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/diksha-dhalpe-3771a62a6/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bls%2BQCd00RSOiawyZZ%2Br%2FJQ%3D%3D" class="icon-btn" target="_blank" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>©2026 DikshaDhalpe</span>
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Toast notification -->
+<div id="toast" role="status" aria-live="polite">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+  Message sent! I'll reply soon 🚀
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROJECT MODAL                                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Project details">
+  <div class="glass modal-box">
+    <button id="modal-close" class="modal-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img id="modal-img" src="" alt="Project screenshot" class="modal-img" />
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc" style="color:var(--muted);font-size:.95rem;"></p>
+
+      <div class="modal-section">
+        <h4>Tech Stack</h4>
+        <div id="modal-stack" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+      </div>
+      <div class="modal-section">
+        <h4>Key Features</h4>
+        <ul id="modal-features"></ul>
+      </div>
+      <div class="modal-section">
+        <h4>Architecture</h4>
+        <p id="modal-arch"></p>
+      </div>
+      <div class="modal-section">
+        <h4>Challenges Faced</h4>
+        <p id="modal-challenges"></p>
+      </div>
+      <div class="modal-section">
+        <h4>Future Improvements</h4>
+        <p id="modal-future"></p>
+      </div>
+      <div class="modal-actions">
+        <a id="modal-gh" href="#" target="_blank" class="btn btn-outline btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          View on GitHub
+        </a>
+        <a id="modal-demo" href="#" target="_blank" class="btn btn-primary btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SCRIPTS                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script src="js/projects.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
