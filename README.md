@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This portfolio showcases my projects, 
 
 ## 🔗 Live Demo
 
-[DEMO](https://dikshadhalpe-portfolio-dikshadhalpes-projects.vercel.app/)
+[DEMO](https://dikshadhalpe-portfolio.vercel.app/)
 
 ---
 
